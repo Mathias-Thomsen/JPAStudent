@@ -19,6 +19,5 @@ spring.datasource.password=${JDBCPassword}
 # spring.jpa.hibernate.ddl-auto=create-drop: This line configures the behavior of Hibernate, the JPA (Java Persistence API) implementation used by Spring Boot, with regard to database schema creation. In this case, it's set to create-drop, which means that Hibernate will create the database schema when the application starts and drop it when the application shuts down. This is typically used for development and testing environments.
 # spring.jpa.show-sql=true: This line instructs Spring Boot to log SQL statements that are executed by Hibernate. Setting it to true enables SQL logging, which can be useful for debugging and understanding the database interactions of your application.
 
-spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.ddl-auto=create-drop
 spring.jpa.show-sql=true
-

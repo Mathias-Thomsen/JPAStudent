@@ -22,11 +22,16 @@ public class StudentRestController {
         return "Du er i roden af JPAStudent";
     }
 
-    @GetMapping("/Students")
+    @GetMapping("/students")
     public List<Student> students() {
         var obj = studentRepository.findAll();
 
         return obj;
+    }
+
+    @GetMapping("/hello")
+    public String getHello() {
+        return "Hello World";
     }
 
 

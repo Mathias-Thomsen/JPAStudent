@@ -7,9 +7,11 @@ import jakarta.persistence.Id;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 
 @Entity
+
 public class Student {
 
     @Id
@@ -18,7 +20,18 @@ public class Student {
     private int id;
     private String name;
     private LocalDate bornDate;
-    private LocalDate bornTime;
+    private LocalTime bornTime;
+
+    public Student( String name, LocalDate bornDate, LocalTime bornTime) {
+        this.name = name;
+        this.bornDate = bornDate;
+        this.bornTime = bornTime;
+    }
+
+    public Student() {
+
+    }
+
 
     public int getId() {
         return id;
@@ -44,11 +57,11 @@ public class Student {
         this.bornDate = bornDate;
     }
 
-    public LocalDate getBornTime() {
+    public LocalTime getBornTime() {
         return bornTime;
     }
 
-    public void setBornTime(LocalDate bornTime) {
+    public void setBornTime(LocalTime bornTime) {
         this.bornTime = bornTime;
     }
 }
